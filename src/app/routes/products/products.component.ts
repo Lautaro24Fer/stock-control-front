@@ -11,7 +11,7 @@ import productsMocked from '../../core/data/mock';
 })
 export default class ProductsComponent implements OnInit {
 
-  private data: IProductMocked[] = [];
+  data: IProductMocked[] = [];
 
   ngOnInit(): void {
     this.data =  productsMocked;

@@ -1,6 +1,12 @@
-<div class="container-fluid d-flex min-vh-100 p-0">
-	<app-aside />
-	<app-main>
-		<router-outlet />
-	</app-main>
+<div class="container-fluid h-100 px-0" style="width: 100vw;">
+	<div class="row h-100">
+		<div class="col col-2 px-0">
+			<app-aside />
+		</div>
+		<div class="col col-10 px-0">
+			<app-main>
+				<router-outlet />
+			</app-main>
+		</div>
+	</div>
 </div>
