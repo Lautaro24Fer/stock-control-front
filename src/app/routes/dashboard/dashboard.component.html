@@ -1,12 +1,11 @@
-<div class="container-fluid h-100 px-0" style="width: 100vw;">
-	<div class="row h-100">
-		<div class="col col-2 px-0">
-			<app-aside />
-		</div>
-		<div class="col col-10 px-0">
-			<app-main>
-				<router-outlet />
-			</app-main>
-		</div>
+<section class="h-100 d-flex" style="width: 100%;">
+	<div class="h-100 px-0">
+		<app-aside />
 	</div>
-</div>
+	<div class="h-100 overflow-y-hidden container-fluid px-0 mx-0">
+		<app-main>
+			<router-outlet />
+		</app-main>
+	</div>
+</section>
+	

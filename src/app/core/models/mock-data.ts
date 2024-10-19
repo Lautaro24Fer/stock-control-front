@@ -2,6 +2,7 @@ export interface IProductMocked {
 	id: number;
 	name: string;
 	category: IProductCategoryMocked;
+	price: number;
 	quantity: number;
 	date: Date;
 	method: IPaymentMethodMocked;

@@ -1,0 +1,29 @@
+aside{
+    width: 3rem;
+    transition: all .2s ease-in;
+}
+
+aside:hover{
+    width: 12rem;
+}
+
+aside ul li a{
+    opacity: 0;
+    position: absolute;
+}
+
+aside:hover ul li a{
+    position: relative;
+    opacity: 1;
+    transition: all .2s ease-in;
+}
+/* 
+aside ul li i{
+    height: .5rem;
+    transition: all .3s ease-in;
+}
+
+aside:hover ul li i{
+    height: 1.5rem;
+} */
+
