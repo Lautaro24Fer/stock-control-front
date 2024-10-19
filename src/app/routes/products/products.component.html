@@ -7,7 +7,7 @@
 		</form>
 	</div>
 	<div class="d-flex flex-wrap gap-3 pt-3  w-100">
-		<table class="table bg-primary">
+		<table class="table">
 			<thead>
 				<tr>
 					<th scope="col">ID</th>
@@ -18,7 +18,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				@for (item of data; track $index) {
+				@for (item of currentPageData; track item.id) {
 				<tr>
 					<th scope="row">{{item.id}}</th>
 					<td>{{item.name}}</td>
@@ -27,12 +27,13 @@
 					<td>
 						<div class="d-flex gap-2">
 							<button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-							<button class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+							<button class="btn btn-danger"><i class="bi bi-trash3"></i></button>	
 						</div>
 					</td>
 				</tr>
 				}
 			</tbody>
 		</table>
+		<app-pagination [totalPages]="totalPages" [currentPage]="currentPage" (pageChangeEvent)="onChangingPage($event)" />
 	</div>
 </div>

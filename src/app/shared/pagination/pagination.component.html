@@ -1,0 +1,18 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <button (click)="prevPage()" class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+			</button>
+    </li>
+		@for (page of pages; track $index) {
+			<li class="page-item"><button class="page-link" (click)="goToPage(page)">{{page}}</button></li>
+
+		}
+    <li class="page-item">
+      <button (click)="nextPage()" class="page-link" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+			</button>
+    </li>
+  </ul>
+</nav>
