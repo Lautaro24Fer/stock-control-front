@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { IProductMocked } from '../../core/models/mock-data';
 import productsMocked from '../../core/data/mock';
 import { PaginationComponent } from '../../shared/pagination/pagination.component';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [PaginationComponent],
+  imports: [PaginationComponent, CurrencyPipe],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -24,6 +25,7 @@ export default class ProductsComponent implements OnInit {
     this.currentPage = 1;
     this.pageQuantity = 3;
     this.totalPages = Math.ceil(productsMocked.length / this.pageQuantity);
+
   }
 
   onChangingPage(page: number){
@@ -35,5 +37,6 @@ export default class ProductsComponent implements OnInit {
     let endIndex = startIndex + this.pageQuantity;
     this.currentPageData = this.data.slice(startIndex, endIndex)
   }
+
 
 }
